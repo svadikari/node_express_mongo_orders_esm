@@ -1,0 +1,17 @@
+    version: '3.8'
+    services:
+      app:
+        build: . # Builds your application from the current directory's Dockerfile
+        ports:
+          - "8080:8080" # Example port mapping for your application
+        depends_on:
+          - mongo
+        environment:
+          DB_URI: mongodb://mongo:27017/order-db # Connection string for your app
+
+      mongo:
+        image: mongo:latest # Use the official MongoDB image
+        ports:
+          - "27017:27017" # Map MongoDB's default port
+        volumes:
+          - mongodb_data:/data/db

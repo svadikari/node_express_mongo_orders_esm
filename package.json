@@ -1,0 +1,27 @@
+{
+  "name": "node_express_mongo_orders_esm",
+  "version": "1.0.0",
+  "description": "Order API CRUS Rest Services  using ESM modules",
+  "main": "./src/app.mjs",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "start:dev": "nodemon src/server.mjs"
+  },
+  "author": "Shyam Vadikari",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "joi": "^18.0.1",
+    "mongoose": "^8.17.2"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "mongodb-memory-server": "^10.2.0",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4",
+    "vitest": "^3.2.4",
+    "vitest-mock-express": "^2.2.0"
+  }
+}
