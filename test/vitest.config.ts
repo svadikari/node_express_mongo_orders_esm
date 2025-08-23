@@ -1,4 +1,4 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
@@ -6,10 +6,11 @@ export default defineConfig({
     environment: 'test',
     setupFiles: ['./test/db-setup.mjs'],
     coverage: {
+      provider: 'v8',
       reporter: ['text', 'json', 'html'],
       all: true,
       include: ['src/**/*.js'],
-      exclude: ['node_modules/', 'src/app.mjs', 'src/server.mjs'],
+      exclude: ['**/node_modules/**', '**/server.mjs', '**/server.mjs'],
     },
   },
 });

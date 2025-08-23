@@ -88,6 +88,7 @@ Run tests with coverage:
 ```bash
 npm run coverage
 ```
+![code-coverage-report](code-coverage-report.png)
 
 Notes:
 - Tests are in `test/` (for example `test/orders/controllers.test.mjs`, `test/orders/routers.test.mjs`).
